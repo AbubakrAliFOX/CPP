@@ -1,7 +1,13 @@
 #include <iostream>
+using namespace std;
 
 int main () {
-    std::cout << "Hello this is me" << std::endl;
-    std::cout << " me\n\n";
-    return 0;
+    cout << "********************\n";
+    cout << "Name: Abubakr Ali\n";
+    cout << "Age: 24\n";
+    cout << "City: Om-Rowaba\n";
+    cout << "Country: Sudan\n";
+    cout << "********************\n";
+    return 1+1;
 }
+
