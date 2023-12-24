@@ -19,7 +19,7 @@ int main()
 
 
     Total = Seconds + (60 * Minutes) + (60 * 60 * Hours) + (24 * 60 * 60 * Days);
-    cout << "Total is: " << Total << "Seconds" << endl;
+    cout << "Total is: " << Total << " Seconds" << endl;
 
     return 0;
 }
