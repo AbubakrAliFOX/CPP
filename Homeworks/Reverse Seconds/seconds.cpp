@@ -1,13 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    unsigned int Total, Days, Hours, Minutes, Seconds;
-
-    cout << "Please enter Total Seconds: ";
-    cin >> Total;
-
+void secondsToDays (int Total) {
+    unsigned int Days, Hours, Minutes, Seconds;
     Seconds = Total % 60;
     Total = Total / 60;
 
@@ -22,6 +17,17 @@ int main()
     cout << "Hours : " << Hours << endl;
     cout << "Minutes : " << Minutes << endl;
     cout << "Seconds : " << Seconds << endl;
+}
 
+int main()
+{
+    unsigned int Total;
+
+    cout << "Please enter Total Seconds: ";
+    cin >> Total;
+
+    secondsToDays(Total);
+
+    
     return 0;
 }

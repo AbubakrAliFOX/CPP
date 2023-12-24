@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
+float ToSeconds (float Days, float Hours, float Minutes, float Seconds) {
+    float Total;
+    Total = Seconds + (60 * Minutes) + (60 * 60 * Hours) + (24 * 60 * 60 * Days);
+    return Total;
+}
+
 int main()
 {
     float Days, Hours, Minutes, Seconds, Total;
@@ -18,8 +24,7 @@ int main()
     cin >> Seconds;
 
 
-    Total = Seconds + (60 * Minutes) + (60 * 60 * Hours) + (24 * 60 * 60 * Days);
-    cout << "Total is: " << Total << " Seconds" << endl;
+    cout << "Total is: " << ToSeconds(Days, Hours, Minutes, Seconds) << " Seconds" << endl;
 
     return 0;
 }
