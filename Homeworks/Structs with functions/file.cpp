@@ -16,8 +16,8 @@ struct User
 void GetInfo (User &Info) {
 
     cout << "Please inter your name ";
-    cin >> Info.Name;
-
+    getline(cin, Info.Name);
+    
     cout << "Please inter your city ";
     cin >> Info.City;
 
