@@ -2,43 +2,44 @@
 // #include<string>
 using namespace std;
 
-void ReadPIN(int &PIN)
+int ReadPIN()
 {
+    int Number;
     cout << "Please enter your PIN number: " << endl;
-    cin >> PIN;
-
+    cin >> Number;
+    return Number;
 }
 
-bool isPINValid(int PIN)
+bool Login()
 {
-    if (PIN == 1234)
+    int PIN;
+    int Counter = 3;
+    do
     {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+        PIN = ReadPIN();
+        if (PIN == 1234)
+        {
+            return true;
+        }
+        else
+        {   
+            Counter--;
+            cout << "Wrong pin, you have" << to_string(Counter) << "attempts left" << endl;
+        }
+    } while ((PIN != 1234) && (Counter != 0));
+
+    return false;
 }
 
-void ShowBalance (int PIN) {
-    int Balance = 7500;
-    if (isPINValid(PIN) == true) {
-        cout << "You Balace is: " << Balance << endl;
-    } else {
-        cout << "Invalid Pin, Please try again" << endl;
-    }
-}
+
 
 int main()
 {
     int PIN;
-    while (isPINValid(PIN) == false)
+    if (Login())
     {
-        ReadPIN(PIN);
-        ShowBalance(PIN);
+        cout << "Your account balance is 7500";
     }
-    
 
     return 0;
 }
